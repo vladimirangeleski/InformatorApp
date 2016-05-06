@@ -1,14 +1,21 @@
 package rotaryinformatorapp.com.rotaryinformatorapp.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Vladimir on 5/5/2016.
  */
 public class Category {
 
+    private int id;
     private String name;
     private int drawable;
 
-    public Category(String name, int drawable) {
+    private List<SubCategory> subCategories = new ArrayList<>(30);
+
+    public Category(int id, String name, int drawable) {
+        this.id = id;
         this.name = name;
         this.drawable = drawable;
     }
@@ -27,5 +34,25 @@ public class Category {
 
     public void setDrawable(int drawable) {
         this.drawable = drawable;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void addSubCategory(SubCategory subCategory) {
+        subCategories.add(subCategory);
+    }
+
+    public List<SubCategory> getSubCategories() {
+        return subCategories;
+    }
+
+    public void setSubCategories(List<SubCategory> subCategories) {
+        this.subCategories = subCategories;
     }
 }

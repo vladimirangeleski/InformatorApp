@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import java.util.ArrayList;
-
 import rotaryinformatorapp.com.rotaryinformatorapp.App;
 import rotaryinformatorapp.com.rotaryinformatorapp.R;
 import rotaryinformatorapp.com.rotaryinformatorapp.adapter.CategoriesRecyclerViewAdapter;

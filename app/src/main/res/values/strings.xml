@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">RotaryInformatorApp</string>
+
+
+    <string name="category_mvr">МВР</string>
+    <string name="category_katastar">КАТАСТАР</string>
+    <string name="category_sud">СУД</string>
+    <string name="category_ujp">УЈП</string>
+
+
+    <string name="sub_category_sud_1">УВЕРЕНИЕ ДЕКА НЕ Е ИЗРЕЧЕНА САНКЦИЈА – ЗАБРАНА ЗА ВРШЕЊЕ ПРОФЕСИЈА, ДЕЈНОСТ ИЛИ ДОЛЖНОСТ</string>
+    <string name="sub_category_sud_2">УВЕРЕНИЕ ДЕКА ЛИЦЕТО НЕ Е ЛИШЕНО ОД ДЕЛОВНА СПОСОБНОСТ</string>
+    <string name="sub_category_sud_3">УВЕРЕНИЕ ДЕКА ЗА ЛИЦЕТО НЕ СЕ ВОДИ ПОСТАПКА ЗА ЛИШУВАЊЕ ОД ДЕЛОВНАТА СПОСОБНОСТ</string>
+
 </resources>
