@@ -3,6 +3,7 @@ package rotaryinformatorapp.com.rotaryinformatorapp.ui.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import rotaryinformatorapp.com.rotaryinformatorapp.App;
 import rotaryinformatorapp.com.rotaryinformatorapp.R;
 import rotaryinformatorapp.com.rotaryinformatorapp.adapter.SubCategoriesRecyclerViewAdapter;
+import rotaryinformatorapp.com.rotaryinformatorapp.custom.DividerItemDecoration;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.Category;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.BundleConstants;
@@ -25,7 +27,6 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
 
     private Category category;
     private RecyclerView recyclerView;
-    private SubCategoriesRecyclerViewAdapter adapter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +50,8 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(App.getContext());
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addItemDecoration(
+                new DividerItemDecoration(getActivity(), R.drawable.divider));
     }
 
     private void setSubCategoriesAdapter() {
@@ -57,6 +60,15 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
 
     @Override
     public void onSubCategoryClick(SubCategory category, int position) {
+        openClickedDocument(category, position);
+    }
 
+    private void openClickedDocument(SubCategory category, int position) {
+        FragmentManager fm = getFragmentManager();
+        DocumentFragment fragment = new DocumentFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(BundleConstants.SUB_CATEGORY, category);
+        fragment.setArguments(bundle);
+        fm.beginTransaction().replace(R.id.container, fragment, DocumentFragment.TAG).addToBackStack(null).commit();
     }
 }

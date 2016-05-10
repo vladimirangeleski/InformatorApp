@@ -7,6 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.joanzapata.pdfview.PDFView;
+
+import java.io.File;
+
 import rotaryinformatorapp.com.rotaryinformatorapp.R;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.BundleConstants;
@@ -18,6 +22,8 @@ public class DocumentFragment extends Fragment {
     public static final String TAG = "DocumentFragment";
 
     private SubCategory subCategory;
+
+    private PDFView pdfView;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,10 +38,18 @@ public class DocumentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_document, container, false);
         initView(view);
+        display("test.pdf");
         return view;
     }
 
     private void initView(View view) {
+        pdfView = (PDFView) view.findViewById(R.id.pdfview);
+    }
 
+    private void display(String assetFileName) {
+        getActivity().setTitle(subCategory.getName());
+
+        pdfView.fromAsset(assetFileName)
+                .load();
     }
 }
