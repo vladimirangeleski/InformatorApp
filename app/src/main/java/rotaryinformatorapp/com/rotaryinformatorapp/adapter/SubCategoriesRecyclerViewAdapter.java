@@ -14,22 +14,23 @@ import java.util.List;
 
 import rotaryinformatorapp.com.rotaryinformatorapp.R;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.Category;
+import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
 
 /**
  * Created by Vladimir on 5/5/2016.
  */
-public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<CategoriesRecyclerViewAdapter.MyViewHolder> {
+public class SubCategoriesRecyclerViewAdapter extends RecyclerView.Adapter<SubCategoriesRecyclerViewAdapter.MyViewHolder> {
 
-    public interface OnCategoryItemClickListener {
-        public void onCategoryClick(Category category, int position);
+    public interface OnSubCategoryItemClickListener {
+        public void onSubCategoryClick(SubCategory category, int position);
     }
 
-    private List<Category> data = Collections.emptyList();
+    private List<SubCategory> data = Collections.emptyList();
     private LayoutInflater inflater;
     private Context context;
-    private OnCategoryItemClickListener listener;
+    private OnSubCategoryItemClickListener listener;
 
-    public CategoriesRecyclerViewAdapter(Context context, List<Category> data, OnCategoryItemClickListener listener) {
+    public SubCategoriesRecyclerViewAdapter(Context context, List<SubCategory> data, OnSubCategoryItemClickListener listener) {
         this.context = context;
         inflater = LayoutInflater.from(context);
         this.data = data;
@@ -38,23 +39,22 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.item_category, parent, false);
+        View view = inflater.inflate(R.layout.item_sub_category, parent, false);
         MyViewHolder holder = new MyViewHolder(view);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        final Category category = data.get(position);
+        final SubCategory category = data.get(position);
 
         holder.title.setText(category.getName());
-        holder.image.setImageResource(category.getDrawable());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (listener != null)
-                    listener.onCategoryClick(category, position);
+                    listener.onSubCategoryClick(category, position);
             }
         });
     }
@@ -66,12 +66,10 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
 
     class MyViewHolder extends RecyclerView.ViewHolder {
         private final TextView title;
-        private final ImageView image;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.title);
-            image = (ImageView) itemView.findViewById(R.id.image);
         }
     }
 }

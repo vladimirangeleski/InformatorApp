@@ -1,9 +1,11 @@
 package rotaryinformatorapp.com.rotaryinformatorapp.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Vladimir on 5/6/2016.
  */
-public class SubCategory {
+public class SubCategory implements Serializable {
     private int id;
     private String name;
     private int resource;
@@ -36,5 +38,14 @@ public class SubCategory {
 
     public void setResource(int resource) {
         this.resource = resource;
+    }
+
+    @Override
+    public String toString() {
+        return "SubCategory{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", resource=" + resource +
+                '}';
     }
 }

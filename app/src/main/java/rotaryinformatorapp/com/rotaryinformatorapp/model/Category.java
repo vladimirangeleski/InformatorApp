@@ -1,12 +1,13 @@
 package rotaryinformatorapp.com.rotaryinformatorapp.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Vladimir on 5/5/2016.
  */
-public class Category {
+public class Category implements Serializable{
 
     private int id;
     private String name;
@@ -54,5 +55,15 @@ public class Category {
 
     public void setSubCategories(List<SubCategory> subCategories) {
         this.subCategories = subCategories;
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", drawable=" + drawable +
+                ", subCategories=" + subCategories +
+                '}';
     }
 }

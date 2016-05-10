@@ -1,6 +1,7 @@
 package rotaryinformatorapp.com.rotaryinformatorapp;
 
 import android.app.Application;
+import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,12 +15,32 @@ import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
  */
 public class App extends Application {
 
-    public static List<Category> categories = Collections.emptyList();
+    private static List<Category> categories = Collections.emptyList();
+    private static Context context;
 
     @Override
     public void onCreate() {
         super.onCreate();
         createCategories();
+        context = getApplicationContext();
+    }
+
+    /**
+     * get application context
+     *
+     * @return
+     */
+    public static Context getContext() {
+        return context;
+    }
+
+    /**
+     * get categories
+     *
+     * @return
+     */
+    public static List<Category> getCategories() {
+        return categories;
     }
 
     private void createCategories() {
@@ -28,8 +49,9 @@ public class App extends Application {
          *mvr
          */
         Category category1 = new Category(1, getString(R.string.category_mvr), R.drawable.ic_description_black_36dp);
-        category1.addSubCategory(new SubCategory(1, getString(R.string.sub_category_sud_1), 777));
-        category1.addSubCategory(new SubCategory(2, getString(R.string.sub_category_sud_2), 778));
+        category1.addSubCategory(new SubCategory(1, getString(R.string.sub_category_mvr_1), 777));
+        category1.addSubCategory(new SubCategory(2, getString(R.string.sub_category_mvr_2), 778));
+        category1.addSubCategory(new SubCategory(2, getString(R.string.sub_category_mvr_2), 779));
         categories.add(category1);
 
         /**
@@ -44,8 +66,9 @@ public class App extends Application {
          *sud
          */
         Category category3 = new Category(3, getString(R.string.category_katastar), R.drawable.ic_description_black_36dp);
-        category3.addSubCategory(new SubCategory(1, getString(R.string.sub_category_sud_1), 777));
-        category3.addSubCategory(new SubCategory(2, getString(R.string.sub_category_sud_2), 778));
+        category3.addSubCategory(new SubCategory(1, getString(R.string.sub_category_katastar_1), 777));
+        category3.addSubCategory(new SubCategory(2, getString(R.string.sub_category_katastar_2), 778));
+        category3.addSubCategory(new SubCategory(2, getString(R.string.sub_category_katastar_3), 778));
         categories.add(category3);
 
         /**

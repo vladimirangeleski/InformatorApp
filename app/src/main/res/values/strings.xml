@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RotaryInformatorApp</string>
+    <string name="app_name">Информатор</string>
 
 
     <string name="category_mvr">МВР</string>
@@ -11,5 +11,14 @@
     <string name="sub_category_sud_1">УВЕРЕНИЕ ДЕКА НЕ Е ИЗРЕЧЕНА САНКЦИЈА – ЗАБРАНА ЗА ВРШЕЊЕ ПРОФЕСИЈА, ДЕЈНОСТ ИЛИ ДОЛЖНОСТ</string>
     <string name="sub_category_sud_2">УВЕРЕНИЕ ДЕКА ЛИЦЕТО НЕ Е ЛИШЕНО ОД ДЕЛОВНА СПОСОБНОСТ</string>
     <string name="sub_category_sud_3">УВЕРЕНИЕ ДЕКА ЗА ЛИЦЕТО НЕ СЕ ВОДИ ПОСТАПКА ЗА ЛИШУВАЊЕ ОД ДЕЛОВНАТА СПОСОБНОСТ</string>
+
+
+    <string name="sub_category_katastar_1">катастар ТЕСТ 1</string>
+    <string name="sub_category_katastar_2">катастар ТЕСТ 2</string>
+    <string name="sub_category_katastar_3">катастар ТЕСТ 3</string>
+
+    <string name="sub_category_mvr_1">mvr ТЕСТ 1</string>
+    <string name="sub_category_mvr_2">мвр ТЕСТ 2</string>
+    <string name="sub_category_mvr_3">свр ТЕСТ 3</string>
 
 </resources>
