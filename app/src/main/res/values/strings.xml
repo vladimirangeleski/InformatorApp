@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Информатор</string>
+    <string name="load_file_error">Се случи грешка. Обидете се повторно</string>
+
 
 
     <string name="category_mvr">МВР</string>

@@ -66,4 +66,11 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
         LogWrapper.d(TAG, "onCategoryClick categpry=" + category);
         openClickedCategory(category, position);
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity() != null)
+            getActivity().setTitle(getString(R.string.app_name));
+    }
 }

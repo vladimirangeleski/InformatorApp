@@ -49,34 +49,34 @@ public class App extends Application {
          *mvr
          */
         Category category1 = new Category(1, getString(R.string.category_mvr), R.drawable.ic_description_black_36dp);
-        category1.addSubCategory(new SubCategory(1, getString(R.string.sub_category_mvr_1), 777));
-        category1.addSubCategory(new SubCategory(2, getString(R.string.sub_category_mvr_2), 778));
-        category1.addSubCategory(new SubCategory(2, getString(R.string.sub_category_mvr_2), 779));
+        category1.addSubCategory(new SubCategory(1, getString(R.string.sub_category_mvr_1), "test.pdf"));
+        category1.addSubCategory(new SubCategory(2, getString(R.string.sub_category_mvr_2), "acro7_pg_ue.pdf"));
+        category1.addSubCategory(new SubCategory(2, getString(R.string.sub_category_mvr_2), "acro7_pg_ue.pdf"));
         categories.add(category1);
 
         /**
          *sud
          */
         Category category2 = new Category(2, getString(R.string.category_sud), R.drawable.ic_description_black_36dp);
-        category2.addSubCategory(new SubCategory(1, getString(R.string.sub_category_sud_1), 777));
-        category2.addSubCategory(new SubCategory(2, getString(R.string.sub_category_sud_2), 778));
+        category2.addSubCategory(new SubCategory(1, getString(R.string.sub_category_sud_1), "test.pdf"));
+        category2.addSubCategory(new SubCategory(2, getString(R.string.sub_category_sud_2), "acro7_pg_ue.pdf"));
         categories.add(category2);
 
         /**
          *sud
          */
         Category category3 = new Category(3, getString(R.string.category_katastar), R.drawable.ic_description_black_36dp);
-        category3.addSubCategory(new SubCategory(1, getString(R.string.sub_category_katastar_1), 777));
-        category3.addSubCategory(new SubCategory(2, getString(R.string.sub_category_katastar_2), 778));
-        category3.addSubCategory(new SubCategory(2, getString(R.string.sub_category_katastar_3), 778));
+        category3.addSubCategory(new SubCategory(1, getString(R.string.sub_category_katastar_1), "acro7_pg_ue.pdf"));
+        category3.addSubCategory(new SubCategory(2, getString(R.string.sub_category_katastar_2), "acro7_pg_ue.pdf"));
+        category3.addSubCategory(new SubCategory(2, getString(R.string.sub_category_katastar_3), "acro7_pg_ue.pdf"));
         categories.add(category3);
 
         /**
          *sud
          */
         Category category4 = new Category(4, getString(R.string.category_ujp), R.drawable.ic_description_black_36dp);
-        category4.addSubCategory(new SubCategory(1, getString(R.string.sub_category_sud_1), 777));
-        category4.addSubCategory(new SubCategory(2, getString(R.string.sub_category_sud_2), 778));
+        category4.addSubCategory(new SubCategory(1, getString(R.string.sub_category_sud_1), ""));
+        category4.addSubCategory(new SubCategory(2, getString(R.string.sub_category_sud_2), ""));
         categories.add(category4);
     }
 

@@ -6,14 +6,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.joanzapata.pdfview.PDFView;
 
-import java.io.File;
-
+import rotaryinformatorapp.com.rotaryinformatorapp.App;
 import rotaryinformatorapp.com.rotaryinformatorapp.R;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.BundleConstants;
+import rotaryinformatorapp.com.rotaryinformatorapp.util.LogWrapper;
 
 /**
  * Created by Vladimir on 5/10/2016.
@@ -38,7 +39,7 @@ public class DocumentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_document, container, false);
         initView(view);
-        display("test.pdf");
+        display(subCategory.getAssetFileName());
         return view;
     }
 
@@ -47,9 +48,23 @@ public class DocumentFragment extends Fragment {
     }
 
     private void display(String assetFileName) {
-        getActivity().setTitle(subCategory.getName());
+        try {
+            pdfView.fromAsset(assetFileName).showMinimap(false).enableSwipe(true)
+                    .load();
+            if (getActivity() != null)
+                getActivity().setTitle(subCategory.getName());
+        } catch (Exception e) {
+            LogWrapper.e(TAG, e.getMessage());
+            Toast.makeText(App.getContext(), getString(R.string.load_file_error), Toast.LENGTH_SHORT).show();
+            try {
+                exitFragment();
+            } catch (Exception e1) {
+                LogWrapper.e(TAG, e1.getMessage());
+            }
+        }
+    }
 
-        pdfView.fromAsset(assetFileName)
-                .load();
+    private void exitFragment() {
+        getFragmentManager().popBackStack();
     }
 }

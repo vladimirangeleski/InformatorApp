@@ -71,4 +71,11 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
         fragment.setArguments(bundle);
         fm.beginTransaction().replace(R.id.container, fragment, DocumentFragment.TAG).addToBackStack(null).commit();
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity() != null)
+            getActivity().setTitle(category.getName());
+    }
 }
