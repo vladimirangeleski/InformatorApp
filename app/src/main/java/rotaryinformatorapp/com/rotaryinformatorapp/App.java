@@ -87,18 +87,18 @@ public class App extends Application {
     }
 
     private void initSUDCategory() {
-        Category category = new Category(1, getString(R.string.category_sud), R.drawable.ic_description_black_36dp, R.color.colorAccent, R.color.colorAccent);
+        Category category = new Category(1, getString(R.string.category_sud), R.drawable.ic_description_black_36dp, R.color.sudStatusBar, R.color.sudActionBar);
         for (int i = 0; i < getResources().getTextArray(R.array.category_sud).length; i++) {
-            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_sud)[i], getResources().getStringArray(R.array.documents_sud)[i], R.color.colorPrimary));
+            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_sud)[i], getResources().getStringArray(R.array.documents_sud)[i], R.color.sudIndicator));
 
         }
         categories.add(category);
     }
 
     private void initMVRCategory() {
-        Category category = new Category(1, getString(R.string.category_mvr), R.drawable.ic_description_black_36dp, R.color.ujpStatusBar, R.color.ujpActionBar);
+        Category category = new Category(1, getString(R.string.category_mvr), R.drawable.ic_description_black_36dp, R.color.mvrStatusBar, R.color.mvrActionBar);
         for (int i = 0; i < getResources().getTextArray(R.array.category_mvr).length; i++) {
-            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_mvr)[i], getResources().getStringArray(R.array.documents_mvr)[i], R.color.ujpIndicator));
+            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_mvr)[i], getResources().getStringArray(R.array.documents_mvr)[i], R.color.mvrIndicator));
 
         }
         categories.add(category);

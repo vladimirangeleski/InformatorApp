@@ -1,5 +1,7 @@
 package rotaryinformatorapp.com.rotaryinformatorapp.ui.fragment;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.joanzapata.pdfview.PDFView;
+
+import java.io.File;
 
 import rotaryinformatorapp.com.rotaryinformatorapp.App;
 import rotaryinformatorapp.com.rotaryinformatorapp.R;
@@ -51,7 +55,15 @@ public class DocumentFragment extends Fragment {
         sendEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.putExtra(Intent.EXTRA_EMAIL, new String[]{});
+                email.putExtra(Intent.EXTRA_SUBJECT, subCategory.getName());
+                email.putExtra(Intent.EXTRA_TEXT, subCategory.getName());
+                //need this to prompts email client only
+                email.setType("message/rfc822");
+                Uri uri = Uri.parse("file:///android_asset/" + getActivity().getPackageName() + "/" + subCategory.getAssetFileName());
+                email.putExtra(Intent.EXTRA_STREAM, uri);
+                startActivity(Intent.createChooser(email, "Одбери Email клиент :"));
             }
         });
     }
