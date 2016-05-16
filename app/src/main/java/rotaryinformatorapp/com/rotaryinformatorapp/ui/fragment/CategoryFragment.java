@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 import rotaryinformatorapp.com.rotaryinformatorapp.App;
 import rotaryinformatorapp.com.rotaryinformatorapp.R;
 import rotaryinformatorapp.com.rotaryinformatorapp.adapter.CategoriesRecyclerViewAdapter;
-import rotaryinformatorapp.com.rotaryinformatorapp.custom.DividerItemDecoration;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.Category;
+import rotaryinformatorapp.com.rotaryinformatorapp.ui.activity.MainActivity;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.BundleConstants;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.LogWrapper;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.Util;
@@ -72,5 +72,12 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
         super.onResume();
         if (getActivity() != null)
             getActivity().setTitle(getString(R.string.app_name));
+
+        changeActionbarColor();
+    }
+
+    private void changeActionbarColor() {
+        if (getActivity() != null)
+            ((MainActivity) getActivity()).changeActionbarColor(R.color.colorPrimary,R.color.colorPrimaryDark);
     }
 }

@@ -3,24 +3,162 @@
     <string name="load_file_error">Се случи грешка. Обидете се повторно</string>
 
 
-
     <string name="category_mvr">МВР</string>
     <string name="category_katastar">КАТАСТАР</string>
     <string name="category_sud">СУД</string>
     <string name="category_ujp">УЈП</string>
+    <string name="category_maticno">МАТИЧНО</string>
+    <string name="category_fzo">ФЗО</string>
+    <string name="category_piom">ПИОМ</string>
+    <string name="category_about_rotary">За Ротари</string>
 
 
-    <string name="sub_category_sud_1">УВЕРЕНИЕ ДЕКА НЕ Е ИЗРЕЧЕНА САНКЦИЈА – ЗАБРАНА ЗА ВРШЕЊЕ ПРОФЕСИЈА, ДЕЈНОСТ ИЛИ ДОЛЖНОСТ</string>
-    <string name="sub_category_sud_2">УВЕРЕНИЕ ДЕКА ЛИЦЕТО НЕ Е ЛИШЕНО ОД ДЕЛОВНА СПОСОБНОСТ</string>
-    <string name="sub_category_sud_3">УВЕРЕНИЕ ДЕКА ЗА ЛИЦЕТО НЕ СЕ ВОДИ ПОСТАПКА ЗА ЛИШУВАЊЕ ОД ДЕЛОВНАТА СПОСОБНОСТ</string>
+    <!--SUD-->
+    <string-array name="category_sud">
+        <item>УВЕРЕНИЕ ДЕКА НЕ Е ИЗРЕЧЕНА САНКЦИЈА – ЗАБРАНА ЗА ВРШЕЊЕ ПРОФЕСИЈА, ДЕЈНОСТ ИЛИ ДОЛЖНОСТ</item>
+        <item>УВЕРЕНИЕ ДЕКА ЛИЦЕТО НЕ Е ЛИШЕНО ОД ДЕЛОВНА СПОСОБНОСТ</item>
+        <item>УВЕРЕНИЕ ДЕКА ЗА ЛИЦЕТО НЕ СЕ ВОДИ ПОСТАПКА ЗА ЛИШУВАЊЕ ОД ДЕЛОВНАТА СПОСОБНОСТ</item>
+        <item>ПОТВРДА ДЕКА ПРОТИВ ПРАВНО ЛИЦЕ НЕ СЕ ВОДИ СТЕЧАЈНА ИЛИ ЛИКВИДАЦИСКА ПОСТАПК</item>
+        <item>УВЕРЕНИЕ ДЕКА ПРАВНОТО ЛИЦЕ НЕМА ПРАВОСИЛНА ПРЕСУДА СО КОЈА Е ИЗРЕЧЕНА САНКЦИЈА – ЗАБРАНА ЗА</item>
+        <item>ПОТВРДА ДЕКА РОДИТЕЛСКОТО ПРАВО НЕ Е ОДЗЕМЕНО</item>
+        <item>УЕРЕНИЕ ЗА НЕОСОДУВАНОСТ</item>
+    </string-array>
+
+    <string-array name="documents_sud">
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+    </string-array>
+
+    <!--KATASTAR-->
+    <string-array name="category_katastar">
+        <item>ПОТВРДА ЗА ИМОТНА СОСТОЈБА</item>
+        <item>ИМОТЕН ЛИСТ</item>
+        <item>УВЕРЕНИЕ ЗА ИСТОРИСКИ ПРЕГЛЕД НА ИЗВРШЕНИТЕ ЗАПИШУВАЊА ВО КН (ИСТОРИЈАТ)</item>
+        <item>КОПИЈА ОД КАТАСТАРСКИ ПЛАН</item>
+        <item>ЗАПИШУВАЊЕ ВО КАТАСТАРОТ НА НЕДВИЖНОСТИ</item>
+        <item>ПРОМЕНА ВО КАТАСТАР НА НЕДВИЖНОСТИ</item>
+        <item>Запишување на заложно право – хипотека</item>
+    </string-array>
+
+    <string-array name="documents_katastar">
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+    </string-array>
+
+    <!--MVR-->
+    <string-array name="category_mvr">
+        <item>ИЗДАВАЊЕ ПАТНА ИСПРАВА - ПАСОШ</item>
+        <item>Издавање патна исправа ако е изгубена или исчезната</item>
+        <item>Издавање на патна исправа ако е пополнета или оштетена</item>
+        <item>ИЗДАВАЊЕ ВОЗАЧКА ДОЗВОЛА</item>
+        <item>Издавање на дупликат возачка дозвола</item>
+        <item>ИЗДАВАЊЕ НА ВОЗАЧКА КНИШКА</item>
+        <item>Издавање на инструкторска возачка дозвола</item>
+        <item>ИЗДАВАЊЕ НА СООБРАЌАЈНА ДОЗВОЛА</item>
+        <item>Изгубена сообраќајна дозвола</item>
+        <item>ИЗДАВАЊЕ НА ЛИЧНА КАРТА ЗА ПРВ ПАТ></item>
+        <item>Замена на лична карта</item>
+        <item>Изгубена лична карта</item>
+    </string-array>
+
+    <string-array name="documents_mvr">
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+    </string-array>
+
+    <!--Фондот за здравствено осигурување-->
+    <string-array name="category_fzo">
+        <item>НАДОМЕСТОК НА ПЛАТА ПОРАДИ БОЛЕСТ/ПОВРЕДА/НЕГА</item>
+        <item>НАДОМЕСТОК НА ПЛАТА ПОРАДИ БРЕМЕНОСТ И РАЃАЊЕ</item>
+        <item>НАДОМЕСТОК НА ПЛАТА ПОРАДИ ПОВРЕДА НА РАБОТА/ПРОФЕСИОНАЛНА БОЛЕСТ</item>
+        <item>ПРАВО  НА СПЕЦИЈАЛИЗИРАНА МЕДИЦИНСКА РЕХАБИЛИТАЦИЈА</item>
+        <item>БАРАЊЕ ЗА ОСЛОБОДУВАЊЕ ОД ПАРТИЦИПАЦИЈА</item>
+        <item>БАРАЊЕ ЗА БОЛНИЧКО ЛЕКУВАЊЕ ВО СТРАНСТВО</item>
+        <item>НАДОМЕСТОК НА ПЛАТА ПОРАДИ БРЕМЕНОСТ И РАЃАЊЕ ВО ВИСИНА ОД 50% ОД УТВРДЕНИОТ НАДОМЕСТОК ПОРАДИ ВРАЌАЊЕ НА РАБОТА</item>
+    </string-array>
+
+    <string-array name="documents_fzo">
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+    </string-array>
 
 
-    <string name="sub_category_katastar_1">катастар ТЕСТ 1</string>
-    <string name="sub_category_katastar_2">катастар ТЕСТ 2</string>
-    <string name="sub_category_katastar_3">катастар ТЕСТ 3</string>
+    <!--Управата за водење на матични книги-->
+    <string-array name="category_maticno">
+        <item>ПРИЈАВУВАЊЕ НА БРАК И ИЗДАВАЊЕ НА ИЗВОД ОД МАТИЧНА КНИГА НА ВЕНЧАНИ</item>
+        <item>УПИС НА НОВОРОДЕНЧЕ И ИЗДАВАЊЕ НА ИЗВОД ОД МАТИЧНА КНИГА НА РОДЕНИ</item>
+        <item>ПРИЈАВУВАЊЕ НА БРАК КОЈ Е СКЛУЧЕН НАДВОР ОД РЕПУБЛИКА  МАКЕДОНИЈА</item>
+        <item>ПРИЈАВУВАЊЕ НА ПОЧИНАТО ЛИЦЕ И ИЗДАВАЊЕ НА ИЗВОД ОД МАТИЧНА КНИГА НА УМРЕНИ</item>
+        <item>ИЗДАВАЊЕ НА УВЕРЕНИЕ ЗА СЛОБОДНА БРАЧНА СОСТОЈБА</item>
+    </string-array>
 
-    <string name="sub_category_mvr_1">mvr ТЕСТ 1</string>
-    <string name="sub_category_mvr_2">мвр ТЕСТ 2</string>
-    <string name="sub_category_mvr_3">свр ТЕСТ 3</string>
+    <string-array name="documents_maticno">
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+    </string-array>
+
+    <!-- УЈП-->
+    <string-array name="category_ujp">
+        <item>УВЕРЕНИЕ ДЕКА НЕ Е ИЗРЕЧЕНА САНКЦИЈА – ЗАБРАНА ЗА ВРШЕЊЕ ПРОФЕСИЈА, ДЕЈНОСТ ИЛИ ДОЛЖНОСТ</item>
+        <item>УВЕРЕНИЕ ДЕКА ЛИЦЕТО НЕ Е ЛИШЕНО ОД ДЕЛОВНА СПОСОБНОСТ</item>
+        <item>УВЕРЕНИЕ ДЕКА ЗА ЛИЦЕТО НЕ СЕ ВОДИ ПОСТАПКА ЗА ЛИШУВАЊЕ ОД ДЕЛОВНАТА СПОСОБНОСТ</item>
+        <item>ПОТВРДА ДЕКА ПРОТИВ ПРАВНО ЛИЦЕ НЕ СЕ ВОДИ СТЕЧАЈНА ИЛИ ЛИКВИДАЦИСКА ПОСТАПК</item>
+        <item>УВЕРЕНИЕ ДЕКА ПРАВНОТО ЛИЦЕ НЕМА ПРАВОСИЛНА ПРЕСУДА СО КОЈА Е ИЗРЕЧЕНА САНКЦИЈА – ЗАБРАНА ЗА</item>
+        <item>ПОТВРДА ДЕКА РОДИТЕЛСКОТО ПРАВО НЕ Е ОДЗЕМЕНО</item>
+        <item>УЕРЕНИЕ ЗА НЕОСОДУВАНОСТ</item>
+    </string-array>
+
+    <string-array name="documents_ujp">
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+    </string-array>
+
+
+    <!-- УЈП-->
+    <string-array name="category_piom">
+        <item>ПРАВО НА СТАРОСНА ПЕНЗИЈА</item>
+        <item>ПРАВО НА ИНВАЛИДСКА ПЕНЗИЈА</item>
+        <item>ОСТВАРУВАЊЕ НА ПРАВО ОД СЕМЕЈНА ПЕНЗИЈА</item>
+    </string-array>
+
+
+    <string-array name="documents_piom">
+        <item>test.pdf</item>
+        <item>acro7_pg_ue.pdf</item>
+        <item>test.pdf</item>
+    </string-array>
 
 </resources>

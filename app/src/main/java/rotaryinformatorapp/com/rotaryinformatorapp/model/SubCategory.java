@@ -9,11 +9,13 @@ public class SubCategory implements Serializable {
     private int id;
     private String name;
     private String assetFileName;
+    private int color;
 
-    public SubCategory(int id, String name, String assetFileName) {
+    public SubCategory(int id, String name, String assetFileName, int color) {
         this.id = id;
         this.name = name;
         this.assetFileName = assetFileName;
+        this.color = color;
     }
 
     public int getId() {
@@ -47,5 +49,13 @@ public class SubCategory implements Serializable {
                 ", name='" + name + '\'' +
                 ", assetFileName=" + assetFileName +
                 '}';
+    }
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
     }
 }

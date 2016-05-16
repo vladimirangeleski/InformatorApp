@@ -49,7 +49,7 @@ public class SubCategoriesRecyclerViewAdapter extends RecyclerView.Adapter<SubCa
         final SubCategory category = data.get(position);
 
         holder.title.setText(category.getName());
-
+        holder.indicator.setBackgroundResource(category.getColor());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,10 +66,12 @@ public class SubCategoriesRecyclerViewAdapter extends RecyclerView.Adapter<SubCa
 
     class MyViewHolder extends RecyclerView.ViewHolder {
         private final TextView title;
+        private View indicator;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.title);
+            indicator = (View) itemView.findViewById(R.id.indicator);
         }
     }
 }

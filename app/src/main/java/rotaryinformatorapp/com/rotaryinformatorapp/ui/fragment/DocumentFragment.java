@@ -2,6 +2,7 @@ package rotaryinformatorapp.com.rotaryinformatorapp.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,7 @@ public class DocumentFragment extends Fragment {
     private SubCategory subCategory;
 
     private PDFView pdfView;
+    private FloatingActionButton sendEmail;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,6 +47,13 @@ public class DocumentFragment extends Fragment {
 
     private void initView(View view) {
         pdfView = (PDFView) view.findViewById(R.id.pdfview);
+        sendEmail = (FloatingActionButton) view.findViewById(R.id.sendEmail);
+        sendEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     private void display(String assetFileName) {

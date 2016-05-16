@@ -17,6 +17,7 @@ import rotaryinformatorapp.com.rotaryinformatorapp.adapter.SubCategoriesRecycler
 import rotaryinformatorapp.com.rotaryinformatorapp.custom.DividerItemDecoration;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.Category;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
+import rotaryinformatorapp.com.rotaryinformatorapp.ui.activity.MainActivity;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.BundleConstants;
 
 /**
@@ -77,5 +78,12 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
         super.onResume();
         if (getActivity() != null)
             getActivity().setTitle(category.getName());
+
+        changeActionbarColor();
+    }
+
+    private void changeActionbarColor() {
+        if (getActivity() != null)
+            ((MainActivity) getActivity()).changeActionbarColor(category.getStatusbarColor(),category.getActionbarColor());
     }
 }
