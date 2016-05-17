@@ -22,4 +22,16 @@
     <color name="sudActionBar">#f44336</color>
     <color name="sudStatusBar">#e57373</color>
     <color name="sudIndicator">#b71c1c</color>
+
+    <color name="fzoActionBar">#FF5722</color>
+    <color name="fzoStatusBar">#FF8A65</color>
+    <color name="fzoIndicator">#BF360C</color>
+
+    <color name="katastarActionBar">#FF5722</color>
+    <color name="katastarStatusBar">#FF8A65</color>
+    <color name="katastarIndicator">#BF360C</color>
+
+    <color name="piomActionBar">#FF5722</color>
+    <color name="piomStatusBar">#FF8A65</color>
+    <color name="piomIndicator">#BF360C</color>
 </resources>

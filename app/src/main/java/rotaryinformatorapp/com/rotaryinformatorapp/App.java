@@ -3,6 +3,10 @@ package rotaryinformatorapp.com.rotaryinformatorapp;
 import android.app.Application;
 import android.content.Context;
 
+import com.crashlytics.android.Crashlytics;
+
+import io.fabric.sdk.android.Fabric;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -21,6 +25,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
         createCategories();
         context = getApplicationContext();
     }
@@ -114,43 +119,43 @@ public class App extends Application {
     }
 
     private void initMATICNOCategory() {
-        Category category = new Category(1, getString(R.string.category_maticno), R.drawable.ic_description_black_36dp, R.color.colorAccent, R.color.colorAccent);
+        Category category = new Category(1, getString(R.string.category_maticno), R.drawable.ic_description_black_36dp, R.color.maticnoStatusBar, R.color.maticnoActionBar);
         for (int i = 0; i < getResources().getTextArray(R.array.category_maticno).length; i++) {
-            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_maticno)[i], getResources().getStringArray(R.array.documents_maticno)[i], R.color.colorPrimary));
+            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_maticno)[i], getResources().getStringArray(R.array.documents_maticno)[i], R.color.maticnoIndicator));
 
         }
         categories.add(category);
     }
 
     private void initKATASTARCategory() {
-        Category category = new Category(1, getString(R.string.category_katastar), R.drawable.ic_description_black_36dp, R.color.colorAccent, R.color.colorAccent);
+        Category category = new Category(1, getString(R.string.category_katastar), R.drawable.ic_description_black_36dp, R.color.katastarStatusBar, R.color.katastarActionBar);
         for (int i = 0; i < getResources().getTextArray(R.array.category_katastar).length; i++) {
-            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_katastar)[i], getResources().getStringArray(R.array.documents_katastar)[i], R.color.colorPrimaryDark));
+            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_katastar)[i], getResources().getStringArray(R.array.documents_katastar)[i], R.color.katastarIndicator));
 
         }
         categories.add(category);
     }
 
     private void initFZOCategory() {
-        Category category = new Category(1, getString(R.string.category_fzo), R.drawable.ic_description_black_36dp, R.color.colorAccent, R.color.colorAccent);
+        Category category = new Category(1, getString(R.string.category_fzo), R.drawable.ic_description_black_36dp, R.color.fzoStatusBar, R.color.fzoActionBar);
         for (int i = 0; i < getResources().getTextArray(R.array.category_fzo).length; i++) {
-            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_fzo)[i], getResources().getStringArray(R.array.documents_fzo)[i], R.color.colorPrimary));
+            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_fzo)[i], getResources().getStringArray(R.array.documents_fzo)[i], R.color.fzoIndicator));
 
         }
         categories.add(category);
     }
 
     private void initPIOMCategory() {
-        Category category = new Category(1, getString(R.string.category_piom), R.drawable.ic_description_black_36dp, R.color.colorAccent, R.color.colorAccent);
+        Category category = new Category(1, getString(R.string.category_piom), R.drawable.ic_description_black_36dp, R.color.piomStatusBar, R.color.piomActionBar);
         for (int i = 0; i < getResources().getTextArray(R.array.category_piom).length; i++) {
-            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_piom)[i], getResources().getStringArray(R.array.documents_piom)[i], R.color.colorAccent));
+            category.addSubCategory(new SubCategory(i, getResources().getStringArray(R.array.category_piom)[i], getResources().getStringArray(R.array.documents_piom)[i], R.color.piomIndicator));
 
         }
         categories.add(category);
     }
 
     private void initAboutRotaryCategory() {
-        Category category = new Category(99, getString(R.string.category_about_rotary), R.drawable.ic_description_black_36dp, R.color.colorAccent, R.color.colorAccent);
+        Category category = new Category(99, getString(R.string.category_about_rotary), R.drawable.ic_description_black_36dp, R.color.colorPrimary, R.color.colorPrimaryDark);
 
         categories.add(category);
     }

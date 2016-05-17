@@ -1,8 +1,10 @@
 package rotaryinformatorapp.com.rotaryinformatorapp.ui.fragment;
 
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -14,12 +16,15 @@ import android.widget.Toast;
 import com.joanzapata.pdfview.PDFView;
 
 import java.io.File;
+import java.io.IOException;
 
 import rotaryinformatorapp.com.rotaryinformatorapp.App;
 import rotaryinformatorapp.com.rotaryinformatorapp.R;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
+import rotaryinformatorapp.com.rotaryinformatorapp.ui.activity.MainActivity;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.BundleConstants;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.LogWrapper;
+import rotaryinformatorapp.com.rotaryinformatorapp.util.Util;
 
 /**
  * Created by Vladimir on 5/10/2016.
@@ -57,20 +62,46 @@ public class DocumentFragment extends Fragment {
             public void onClick(View view) {
                 Intent email = new Intent(Intent.ACTION_SEND);
                 email.putExtra(Intent.EXTRA_EMAIL, new String[]{});
-                email.putExtra(Intent.EXTRA_SUBJECT, subCategory.getName());
-                email.putExtra(Intent.EXTRA_TEXT, subCategory.getName());
+                email.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.document) + " " + subCategory.getName());
+                email.putExtra(Intent.EXTRA_TEXT, "");
                 //need this to prompts email client only
                 email.setType("message/rfc822");
-                Uri uri = Uri.parse("file:///android_asset/" + getActivity().getPackageName() + "/" + subCategory.getAssetFileName());
-                email.putExtra(Intent.EXTRA_STREAM, uri);
+                email.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+                Uri uri1 = null;
+                try {
+                    uri1 = Uri.fromFile(Util.getAssetFile(App.getContext(), subCategory.getAssetFileName()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    Toast.makeText(App.getContext(), "Wooops", Toast.LENGTH_LONG).show();
+                }
+
+                //Uri uri1=Uri.parse("file://" + App.getContext().getExternalFilesDir(null) + subCategory.getAssetFileName());
+
+                email.putExtra(Intent.EXTRA_STREAM, uri1);
                 startActivity(Intent.createChooser(email, "Одбери Email клиент :"));
             }
         });
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("savedFragment", TAG);
+        outState.putSerializable(BundleConstants.CATEGORY, BundleConstants.SUB_CATEGORY);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity() != null) {
+            ((MainActivity) getActivity()).displayHomeAsUpEnabled(true);
+        }
+    }
+
     private void display(String assetFileName) {
         try {
-            pdfView.fromAsset(assetFileName).showMinimap(false).enableSwipe(true)
+            pdfView.fromAsset(assetFileName).showMinimap(true).enableSwipe(true)
                     .load();
             if (getActivity() != null)
                 getActivity().setTitle(subCategory.getName());

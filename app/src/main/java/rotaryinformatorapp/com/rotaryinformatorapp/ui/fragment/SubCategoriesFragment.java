@@ -71,6 +71,14 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
         bundle.putSerializable(BundleConstants.SUB_CATEGORY, category);
         fragment.setArguments(bundle);
         fm.beginTransaction().replace(R.id.container, fragment, DocumentFragment.TAG).addToBackStack(null).commit();
+        //.setCustomAnimations(android.R.anim.fade_out, android.R.anim.fade_in)
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("savedFragment", TAG);
+        outState.putSerializable(BundleConstants.CATEGORY, category);
     }
 
     @Override
@@ -79,11 +87,14 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
         if (getActivity() != null)
             getActivity().setTitle(category.getName());
 
+        if (getActivity() != null) {
+            ((MainActivity) getActivity()).displayHomeAsUpEnabled(true);
+        }
         changeActionbarColor();
     }
 
     private void changeActionbarColor() {
         if (getActivity() != null)
-            ((MainActivity) getActivity()).changeActionbarColor(category.getStatusbarColor(),category.getActionbarColor());
+            ((MainActivity) getActivity()).changeActionbarColor(category.getStatusbarColor(), category.getActionbarColor());
     }
 }

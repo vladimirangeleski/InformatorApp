@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -23,6 +24,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initCategoryFragment();
+
+        openFragmentOnConfigurationChange(savedInstanceState);
+    }
+
+    private void openFragmentOnConfigurationChange(Bundle bundle) {
+        if (bundle != null) {
+            if (bundle.containsKey("savedFragment")) {
+
+            }
+        }
+    }
+
+    public void displayHomeAsUpEnabled(boolean enabled) {
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setDisplayHomeAsUpEnabled(enabled);
     }
 
     private void initCategoryFragment() {
@@ -42,4 +58,14 @@ public class MainActivity extends AppCompatActivity {
                 .getColor(actionbarColor)));
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                getSupportFragmentManager().popBackStack();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }

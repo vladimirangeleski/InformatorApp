@@ -29,6 +29,7 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRetainInstance(true);
     }
 
     @Nullable
@@ -59,6 +60,7 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
         bundle.putSerializable(BundleConstants.CATEGORY, category);
         fragment.setArguments(bundle);
         fm.beginTransaction().replace(R.id.container, fragment, SubCategoriesFragment.TAG).addToBackStack(null).commit();
+        //.setCustomAnimations(android.R.anim.fade_out, android.R.anim.fade_in)
     }
 
     @Override
@@ -73,11 +75,14 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
         if (getActivity() != null)
             getActivity().setTitle(getString(R.string.app_name));
 
+        if (getActivity() != null) {
+            ((MainActivity) getActivity()).displayHomeAsUpEnabled(false);
+        }
         changeActionbarColor();
     }
 
     private void changeActionbarColor() {
         if (getActivity() != null)
-            ((MainActivity) getActivity()).changeActionbarColor(R.color.colorPrimary,R.color.colorPrimaryDark);
+            ((MainActivity) getActivity()).changeActionbarColor(R.color.colorPrimary, R.color.colorPrimaryDark);
     }
 }

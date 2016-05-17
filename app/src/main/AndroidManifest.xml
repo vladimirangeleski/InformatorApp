@@ -12,6 +12,7 @@
         <activity
             android:name=".ui.activity.SplashActivity"
             android:noHistory="true"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,10 +21,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.MainActivity">
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0ca6b78f11916ce2da5cb99fd2acd0ab062d2bed" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>
