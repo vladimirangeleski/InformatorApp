@@ -48,7 +48,7 @@ public class SubCategoriesRecyclerViewAdapter extends RecyclerView.Adapter<SubCa
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         final SubCategory category = data.get(position);
 
-        holder.title.setText(category.getName());
+        holder.title.setText(category.getName().toUpperCase());
         holder.indicator.setBackgroundResource(category.getColor());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
