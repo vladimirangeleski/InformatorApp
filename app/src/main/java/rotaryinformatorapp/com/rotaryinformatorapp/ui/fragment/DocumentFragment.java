@@ -68,12 +68,11 @@ public class DocumentFragment extends Fragment {
                 Uri uri1 = null;
                 try {
                     uri1 = Uri.fromFile(Util.getAssetFile(App.getContext(), subCategory.getAssetFileName()));
+                    LogWrapper.d(TAG, "URI=" + uri1);
                 } catch (IOException e) {
                     e.printStackTrace();
                     Toast.makeText(App.getContext(), "Wooops", Toast.LENGTH_LONG).show();
                 }
-
-                //Uri uri1=Uri.parse("file://" + App.getContext().getExternalFilesDir(null) + subCategory.getAssetFileName());
 
                 email.putExtra(Intent.EXTRA_STREAM, uri1);
                 startActivity(Intent.createChooser(email, "Одбери Email клиент :"));

@@ -5,6 +5,7 @@ import android.content.res.AssetManager;
 import android.content.res.Configuration;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -40,16 +41,17 @@ public class Util {
         while ((read = in.read(buffer)) != -1) {
             out.write(buffer, 0, read);
         }
+        LogWrapper.d(TAG, "copyFile() in=" + in.available() + ", out=" + out);
     }
 
     public static File getAssetFile(Context context, String fileName) throws IOException {
         AssetManager assetManager = context.getAssets();
         InputStream in = null;
         OutputStream out = null;
-        File file = new File(context.getFilesDir(), fileName);
+        File file = new File(context.getExternalFilesDir(null), fileName);
         try {
             in = assetManager.open(fileName);
-            out = context.openFileOutput(file.getName(), Context.MODE_WORLD_READABLE);
+            out = new FileOutputStream(new File(context.getExternalFilesDir(null), fileName));
             copyFile(in, out);
         } catch (Exception e) {
             LogWrapper.e(TAG, e.getMessage());
@@ -63,10 +65,8 @@ public class Util {
             if (out != null) {
                 out.close();
             }
-            out = null;
-            in = null;
         }
-        LogWrapper.d(TAG, "file=" + file);
+        LogWrapper.d(TAG, "file=" + file + " ,size=" + file.length() / 1024);
         return file;
     }
 }
