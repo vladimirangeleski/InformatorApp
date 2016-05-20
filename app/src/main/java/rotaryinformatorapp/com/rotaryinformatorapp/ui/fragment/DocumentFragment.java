@@ -1,6 +1,7 @@
 package rotaryinformatorapp.com.rotaryinformatorapp.ui.fragment;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -78,6 +79,8 @@ public class DocumentFragment extends Fragment {
                 startActivity(Intent.createChooser(email, "Одбери Email клиент :"));
             }
         });
+        sendEmail.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(subCategory.getColor())));
+
     }
 
     @Override
