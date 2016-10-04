@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -70,7 +71,9 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
         Bundle bundle = new Bundle();
         bundle.putSerializable(BundleConstants.SUB_CATEGORY, category);
         fragment.setArguments(bundle);
-        fm.beginTransaction().replace(R.id.container, fragment, DocumentFragment.TAG).addToBackStack(null).commit();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        ft.replace(R.id.container, fragment, DocumentFragment.TAG).addToBackStack(null).commit();
         //.setCustomAnimations(android.R.anim.fade_out, android.R.anim.fade_in)
     }
 

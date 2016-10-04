@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -59,7 +60,9 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
         Bundle bundle = new Bundle();
         bundle.putSerializable(BundleConstants.CATEGORY, category);
         fragment.setArguments(bundle);
-        fm.beginTransaction().replace(R.id.container, fragment, SubCategoriesFragment.TAG).addToBackStack(null).commit();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        ft.replace(R.id.container, fragment, SubCategoriesFragment.TAG).addToBackStack(null).commit();
         //.setCustomAnimations(android.R.anim.fade_out, android.R.anim.fade_in)
     }
 
