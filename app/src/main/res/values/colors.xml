@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <!--<color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>-->
+
+    <color name="colorPrimary">@color/rotaryPrimary</color>
+    <color name="colorPrimaryDark">@color/rotaryPrimaryDark</color>
     <color name="colorAccent">#FF4081</color>
 
     <color name="listDivider">#BDBDBD</color>
 
 
-    <color name="ujpActionBar">#FF4081</color>
-    <color name="ujpStatusBar">#FF80AB</color>
-    <color name="ujpIndicator">#F50057</color>
+    <color name="ujpActionBar">#cf1c6a</color>
+    <color name="ujpStatusBar">#e61771</color>
+    <color name="ujpIndicator">#b10d55</color>
 
-    <color name="mvrActionBar">#448AFF</color>
-    <color name="mvrStatusBar">#82B1FF</color>
-    <color name="mvrIndicator">#2979FF</color>
+    <color name="mvrActionBar">#373bad</color>
+    <color name="mvrStatusBar">#454ad5</color>
+    <color name="mvrIndicator">#2e3192</color>
 
-    <color name="maticnoActionBar">#448AFF</color>
-    <color name="maticnoStatusBar">#82B1FF</color>
-    <color name="maticnoIndicator">#2979FF</color>
+    <color name="maticnoActionBar">#898888</color>
+    <color name="maticnoStatusBar">#b8b7b7</color>
+    <color name="maticnoIndicator">#6d6d6d</color>
 
-    <color name="sudActionBar">#ff5252</color>
-    <color name="sudStatusBar">#ff8a80</color>
-    <color name="sudIndicator">#ff1744</color>
+    <color name="sudActionBar">#bb3131</color>
+    <color name="sudStatusBar">#e13f3f</color>
+    <color name="sudIndicator">#992828</color>
 
-    <color name="fzoActionBar">#ff5252</color>
-    <color name="fzoStatusBar">#ff8a80</color>
-    <color name="fzoIndicator">#ff1744</color>
+    <color name="fzoActionBar">#bb0302</color>
+    <color name="fzoStatusBar">#d10100</color>
+    <color name="fzoIndicator">#a30100</color>
 
-    <color name="katastarActionBar">#ff5252</color>
-    <color name="katastarStatusBar">#ff8a80</color>
-    <color name="katastarIndicator">#ff1744</color>
+    <color name="katastarActionBar">#dc137b</color>
+    <color name="katastarStatusBar">#f41c8c</color>
+    <color name="katastarIndicator">#be156c</color>
 
-    <color name="piomActionBar">#ff5252</color>
-    <color name="piomStatusBar">#ff8a80</color>
-    <color name="piomIndicator">#ff1744</color>
+    <color name="piomActionBar">#0095da</color>
+    <color name="piomStatusBar">#02aaf8</color>
+    <color name="piomIndicator">#017ab2</color>
+
+
+    <color name="rotaryPrimary">#c20b3d</color>
+    <color name="rotaryPrimaryDark">#a80532</color>
+
+    <color name="textGray">#686868</color>
 </resources>

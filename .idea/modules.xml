@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/InformatorApp.iml" filepath="$PROJECT_DIR$/InformatorApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RotaryInformatorApp.iml" filepath="$PROJECT_DIR$/RotaryInformatorApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-pdfview/android-pdfview.iml" filepath="$PROJECT_DIR$/android-pdfview/android-pdfview.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

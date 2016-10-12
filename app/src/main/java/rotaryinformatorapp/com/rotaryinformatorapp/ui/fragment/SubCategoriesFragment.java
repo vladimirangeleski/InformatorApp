@@ -20,6 +20,7 @@ import rotaryinformatorapp.com.rotaryinformatorapp.model.Category;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
 import rotaryinformatorapp.com.rotaryinformatorapp.ui.activity.MainActivity;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.BundleConstants;
+import rotaryinformatorapp.com.rotaryinformatorapp.util.SimpleDividerItemDecoration;
 
 /**
  * Created by Vladimir on 5/10/2016.
@@ -54,6 +55,7 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(
                 new DividerItemDecoration(getActivity(), R.drawable.divider));
+        //recyclerView.addItemDecoration(new SimpleDividerItemDecoration(getContext()));
     }
 
     private void setSubCategoriesAdapter() {

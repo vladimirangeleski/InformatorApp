@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +19,7 @@ import rotaryinformatorapp.com.rotaryinformatorapp.adapter.CategoriesRecyclerVie
 import rotaryinformatorapp.com.rotaryinformatorapp.model.Category;
 import rotaryinformatorapp.com.rotaryinformatorapp.ui.activity.MainActivity;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.BundleConstants;
+import rotaryinformatorapp.com.rotaryinformatorapp.util.GridAutofitLayoutManager;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.LogWrapper;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.Util;
 
@@ -46,6 +49,15 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
         categories = (RecyclerView) view.findViewById(R.id.categories);
         categories.setHasFixedSize(true);
         int numberOfColumns = Util.calculateNumberOfCategoryColums(getContext());
+
+        /*Display display = getActivity().getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+
+        float density  = getResources().getDisplayMetrics().density;
+        float dpWidth  = outMetrics.widthPixels / density;
+        int columns = Math.round(dpWidth/300);
+*/
         GridLayoutManager gridLayoutManager = new GridLayoutManager(App.getContext(), numberOfColumns);
         categories.setLayoutManager(gridLayoutManager);
     }
