@@ -30,11 +30,11 @@
     <string-array name="documents_sud">
         <item>test.pdf</item>
         <item>test.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
     </string-array>
 
     <!--KATASTAR-->
@@ -49,13 +49,13 @@
     </string-array>
 
     <string-array name="documents_katastar">
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
+        <item>katastar_potvrda_za_imotna_sostojba.pdf</item>
+        <item>katastar_imoten_list.pdf</item>
+        <item>katastar_uverenie_za_istoriski_pregled_na_izvrshenite_zapisuvanja.pdf</item>
+        <item>katastar_kopija_od_katastarski_plan.pdf</item>
+        <item>katastar_zapisuvanje_vo_katastarot_na_nedviznosti.pdf</item>
+        <item>katastar_promena_vo_katastar_nedviznosti.pdf</item>
+        <item>katastar_zapisuvanje_vo_zalozno_pravo_hipoteka.pdf</item>
     </string-array>
 
     <!--MVR-->
@@ -77,11 +77,11 @@
     <string-array name="documents_mvr">
         <item>test.pdf</item>
         <item>test.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
         <item>test.pdf</item>
         <item>test.pdf</item>
         <item>test.pdf</item>
@@ -103,11 +103,11 @@
     <string-array name="documents_fzo">
         <item>test.pdf</item>
         <item>test.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
     </string-array>
 
 
@@ -123,9 +123,9 @@
     <string-array name="documents_maticno">
         <item>test.pdf</item>
         <item>test.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
     </string-array>
 
     <!-- УЈП-->
@@ -142,11 +142,11 @@
     <string-array name="documents_ujp">
         <item>test.pdf</item>
         <item>test.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
+        <item>test.pdf</item>
     </string-array>
 
 
@@ -160,7 +160,7 @@
 
     <string-array name="documents_piom">
         <item>test.pdf</item>
-        <item>acro7_pg_ue.pdf</item>
+        <item>test.pdf</item>
         <item>test.pdf</item>
     </string-array>
 
