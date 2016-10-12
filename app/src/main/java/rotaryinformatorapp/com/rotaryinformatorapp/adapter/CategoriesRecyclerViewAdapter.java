@@ -43,7 +43,7 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.item_category, parent, false);
-        int height = (int) (parent.getMeasuredHeight() / 4.5);
+        int height = (int) (parent.getMeasuredHeight() / 4);
         view.setMinimumHeight(height);
         MyViewHolder holder = new MyViewHolder(view);
         return holder;
