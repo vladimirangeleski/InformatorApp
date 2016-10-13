@@ -29,7 +29,7 @@ import rotaryinformatorapp.com.rotaryinformatorapp.util.Util;
  * Created by Vladimir on 5/10/2016.
  */
 public class DocumentFragment extends Fragment {
-    public static final String TAG = "DocumentFragment";
+    public static final String TAG = DocumentFragment.class.getName();
 
     private SubCategory subCategory;
 

@@ -118,13 +118,13 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
     static class MyViewHolder extends RecyclerView.ViewHolder {
         private final TextView title;
         private final ImageView image;
-        private final LinearLayout categoryWrapper;
+        //private final LinearLayout categoryWrapper;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.title);
             image = (ImageView) itemView.findViewById(R.id.image);
-            categoryWrapper = (LinearLayout) itemView.findViewById(R.id.categoryWrapper);
+            //categoryWrapper = (LinearLayout) itemView.findViewById(R.id.categoryWrapper);
         }
     }
 }

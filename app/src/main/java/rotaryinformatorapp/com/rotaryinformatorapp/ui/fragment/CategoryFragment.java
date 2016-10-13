@@ -29,6 +29,7 @@ import rotaryinformatorapp.com.rotaryinformatorapp.util.Util;
 public class CategoryFragment extends Fragment implements CategoriesRecyclerViewAdapter.OnCategoryItemClickListener {
     public static final String TAG = "CategoryFragment";
     private RecyclerView categories;
+    private CategoriesRecyclerViewAdapter.OnCategoryItemClickListener onCategoryItemClickListener;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_category, container, false);
+        onCategoryItemClickListener = this;
         initView(view);
         setCategoriesAdapter();
         return view;
@@ -63,7 +65,7 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
     }
 
     private void setCategoriesAdapter() {
-        categories.setAdapter(new CategoriesRecyclerViewAdapter(App.getContext(), App.getCategories(), this));
+        categories.setAdapter(new CategoriesRecyclerViewAdapter(App.getContext(), App.getCategories(), onCategoryItemClickListener));
     }
 
     private void openClickedCategory(Category category, int position) {
@@ -80,7 +82,7 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
 
     @Override
     public void onCategoryClick(Category category, int position) {
-        LogWrapper.d(TAG, "onCategoryClick categpry=" + category);
+        LogWrapper.d(TAG, "onCategoryClick category=" + category);
         openClickedCategory(category, position);
     }
 
@@ -99,5 +101,11 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
     private void changeActionbarColor() {
         if (getActivity() != null)
             ((MainActivity) getActivity()).changeActionbarColor(R.color.colorPrimary, R.color.colorPrimaryDark);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        onCategoryItemClickListener = null;
     }
 }
