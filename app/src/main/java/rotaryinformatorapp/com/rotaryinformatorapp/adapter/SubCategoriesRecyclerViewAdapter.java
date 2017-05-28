@@ -61,14 +61,14 @@ public class SubCategoriesRecyclerViewAdapter extends RecyclerView.Adapter<SubCa
         return data.size();
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
+    static class MyViewHolder extends RecyclerView.ViewHolder {
         private final TextView title;
         private View indicator;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.title);
-            indicator = (View) itemView.findViewById(R.id.indicator);
+            indicator = itemView.findViewById(R.id.indicator);
         }
     }
 }

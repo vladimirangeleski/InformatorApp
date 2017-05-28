@@ -30,6 +30,7 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
 
     private Category category;
     private RecyclerView recyclerView;
+    private SubCategoriesRecyclerViewAdapter.OnSubCategoryItemClickListener onSubCategoryItemClickListener;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,6 +44,7 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sub_categories, container, false);
+        onSubCategoryItemClickListener = this;
         initView(view);
         setSubCategoriesAdapter();
         return view;
@@ -54,12 +56,12 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
         LinearLayoutManager layoutManager = new LinearLayoutManager(App.getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(
-                new DividerItemDecoration(getActivity(), R.drawable.divider));
+                new DividerItemDecoration(App.getContext(), R.drawable.divider));
         //recyclerView.addItemDecoration(new SimpleDividerItemDecoration(getContext()));
     }
 
     private void setSubCategoriesAdapter() {
-        recyclerView.setAdapter(new SubCategoriesRecyclerViewAdapter(App.getContext(), category.getSubCategories(), this));
+        recyclerView.setAdapter(new SubCategoriesRecyclerViewAdapter(App.getContext(), category.getSubCategories(), onSubCategoryItemClickListener));
     }
 
     @Override
@@ -101,5 +103,11 @@ public class SubCategoriesFragment extends Fragment implements SubCategoriesRecy
     private void changeActionbarColor() {
         if (getActivity() != null)
             ((MainActivity) getActivity()).changeActionbarColor(category.getStatusbarColor(), category.getActionbarColor());
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        onSubCategoryItemClickListener = null;
     }
 }

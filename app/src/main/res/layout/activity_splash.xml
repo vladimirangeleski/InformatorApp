@@ -14,17 +14,18 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome_message"
+        android:layout_marginBottom="103dp"
+        android:text="@string/app_name"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="61dp" />
+        android:layout_centerHorizontal="true" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_rotary_logo_playstore"
-        android:id="@+id/imageView"
-        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_rotary_big_logo"
+        android:layout_marginTop="78dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
