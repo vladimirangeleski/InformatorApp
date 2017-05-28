@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Мој Документи</string>
+    <string name="app_name">Мој Документ</string>
     <string name="load_file_error">Се случи грешка. Обидете се повторно</string>
 
 
@@ -28,13 +28,13 @@
     </string-array>
 
     <string-array name="documents_sud">
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
+        <item>sud_uverenie_ne_e_izrecena_sankcija.pdf</item>
+        <item>sud_uverenie_liceto_ne_e_llisheno_od_delovna_sposobnost.pdf</item>
+        <item>sud_uverenie_ne_se_vodi_postapka_za_lishenje_od_delovna_sposobnost.pdf</item>
+        <item>sud_potvrda_pravno_lice_ne_se_vodi_stecajna_likvidaciska_postapka.pdf</item>
+        <item>sud_uverenie_pravnoto_lice_nema_pravosilna_presuda_so_koja_e_izrecena_sankcija_zabrana_za_vrsenje_dejnost.pdf</item>
+        <item>sud_potvrda_roditelsko_pravo_ne_e_odzemeno.pdf</item>
+        <item>sud_uverenie_za_neosuduvanost.pdf</item>
     </string-array>
 
     <!--KATASTAR-->
@@ -75,14 +75,14 @@
     </string-array>
 
     <string-array name="documents_mvr">
+        <item>mvr_izdavanje_patna_isprava_pasos.pdf</item>
         <item>test.pdf</item>
         <item>test.pdf</item>
+        <item>mvr_izdavanje_vozacka_dozvola.pdf</item>
         <item>test.pdf</item>
+        <item>mvr_izdavanje_vozacka_knishka.pdf</item>
         <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
+        <item>mvr_izdavanje_soobrakjajna_dozvola.pdf</item>
         <item>test.pdf</item>
         <item>test.pdf</item>
         <item>test.pdf</item>
@@ -159,9 +159,9 @@
 
 
     <string-array name="documents_piom">
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
+        <item>piom_pravo_na_starosna_penzija.pdf</item>
+        <item>piom_pravo_na_invalidska_penzija.pdf</item>
+        <item>piom_pravo_na_semejna_penzija.pdf</item>
     </string-array>
 
 </resources>
