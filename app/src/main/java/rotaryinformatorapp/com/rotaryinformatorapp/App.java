@@ -68,7 +68,7 @@ public class App extends Application {
         /**
          * UJP
          */
-        initUJPCategory();
+        //initUJPCategory();
 
         /**
          * MATICNO

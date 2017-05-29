@@ -18,114 +18,114 @@
 
     <!--SUD-->
     <string-array name="category_sud">
-        <item>УВЕРЕНИЕ ДЕКА НЕ Е ИЗРЕЧЕНА САНКЦИЈА – ЗАБРАНА ЗА ВРШЕЊЕ ПРОФЕСИЈА, ДЕЈНОСТ ИЛИ ДОЛЖНОСТ</item>
-        <item>УВЕРЕНИЕ ДЕКА ЛИЦЕТО НЕ Е ЛИШЕНО ОД ДЕЛОВНА СПОСОБНОСТ</item>
-        <item>УВЕРЕНИЕ ДЕКА ЗА ЛИЦЕТО НЕ СЕ ВОДИ ПОСТАПКА ЗА ЛИШУВАЊЕ ОД ДЕЛОВНАТА СПОСОБНОСТ</item>
         <item>ПОТВРДА ДЕКА ПРОТИВ ПРАВНО ЛИЦЕ НЕ СЕ ВОДИ СТЕЧАЈНА ИЛИ ЛИКВИДАЦИСКА ПОСТАПКА</item>
-        <item>УВЕРЕНИЕ ДЕКА ПРАВНОТО ЛИЦЕ НЕМА ПРАВОСИЛНА ПРЕСУДА СО КОЈА Е ИЗРЕЧЕНА САНКЦИЈА – ЗАБРАНА ЗА ЗА ВРШЕЊЕ ОДДЕЛНА ДЕЈНОСТ</item>
         <item>ПОТВРДА ДЕКА РОДИТЕЛСКОТО ПРАВО НЕ Е ОДЗЕМЕНО</item>
+        <item>УВЕРЕНИЕ ДЕКА ЗА ЛИЦЕТО НЕ СЕ ВОДИ ПОСТАПКА ЗА ЛИШУВАЊЕ ОД ДЕЛОВНАТА СПОСОБНОСТ</item>
+        <item>УВЕРЕНИЕ ДЕКА ЛИЦЕТО НЕ Е ЛИШЕНО ОД ДЕЛОВНА СПОСОБНОСТ</item>
+        <item>УВЕРЕНИЕ ДЕКА НЕ Е ИЗРЕЧЕНА САНКЦИЈА</item>
+        <item>УВЕРЕНИЕ ДЕКА ПРАВНОТО ЛИЦЕ НЕМА ПРАВОСИЛНА ПРЕСУДА СО КОЈА Е ИЗРЕЧЕНА САНКЦИЈА – ЗАБРАНА ЗА ЗА ВРШЕЊЕ ОДДЕЛНА ДЕЈНОСТ</item>
         <item>УЕРЕНИЕ ЗА НЕОСОДУВАНОСТ</item>
     </string-array>
 
     <string-array name="documents_sud">
-        <item>sud_uverenie_ne_e_izrecena_sankcija.pdf</item>
-        <item>sud_uverenie_liceto_ne_e_llisheno_od_delovna_sposobnost.pdf</item>
-        <item>sud_uverenie_ne_se_vodi_postapka_za_lishenje_od_delovna_sposobnost.pdf</item>
         <item>sud_potvrda_pravno_lice_ne_se_vodi_stecajna_likvidaciska_postapka.pdf</item>
-        <item>sud_uverenie_pravnoto_lice_nema_pravosilna_presuda_so_koja_e_izrecena_sankcija_zabrana_za_vrsenje_dejnost.pdf</item>
         <item>sud_potvrda_roditelsko_pravo_ne_e_odzemeno.pdf</item>
+        <item>sud_uverenie_ne_se_vodi_postapka_za_lishenje_od_delovna_sposobnost.pdf</item>
+        <item>sud_uverenie_liceto_ne_e_llisheno_od_delovna_sposobnost.pdf</item>
+        <item>sud_uverenie_ne_e_izrecena_sankcija.pdf</item>
+        <item>sud_uverenie_pravnoto_lice_nema_pravosilna_presuda_so_koja_e_izrecena_sankcija_zabrana_za_vrsenje_dejnost.pdf</item>
         <item>sud_uverenie_za_neosuduvanost.pdf</item>
     </string-array>
 
     <!--KATASTAR-->
     <string-array name="category_katastar">
-        <item>ПОТВРДА ЗА ИМОТНА СОСТОЈБА</item>
-        <item>ИМОТЕН ЛИСТ</item>
-        <item>УВЕРЕНИЕ ЗА ИСТОРИСКИ ПРЕГЛЕД НА ИЗВРШЕНИТЕ ЗАПИШУВАЊА ВО КН (ИСТОРИЈАТ)</item>
-        <item>КОПИЈА ОД КАТАСТАРСКИ ПЛАН</item>
         <item>ЗАПИШУВАЊЕ ВО КАТАСТАРОТ НА НЕДВИЖНОСТИ</item>
-        <item>ПРОМЕНА ВО КАТАСТАР НА НЕДВИЖНОСТИ</item>
         <item>Запишување на заложно право – хипотека</item>
+        <item>ИМОТЕН ЛИСТ</item>
+        <item>КОПИЈА ОД КАТАСТАРСКИ ПЛАН</item>
+        <item>ПОТВРДА ЗА ИМОТНА СОСТОЈБА</item>
+        <item>ПРОМЕНА ВО КАТАСТАР НА НЕДВИЖНОСТИ</item>
+        <item>УВЕРЕНИЕ ЗА ИСТОРИСКИ ПРЕГЛЕД НА ИЗВРШЕНИТЕ ЗАПИШУВАЊА ВО АКН (ИСТОРИЈАТ)</item>
     </string-array>
 
     <string-array name="documents_katastar">
-        <item>katastar_potvrda_za_imotna_sostojba.pdf</item>
-        <item>katastar_imoten_list.pdf</item>
-        <item>katastar_uverenie_za_istoriski_pregled_na_izvrshenite_zapisuvanja.pdf</item>
-        <item>katastar_kopija_od_katastarski_plan.pdf</item>
-        <item>katastar_zapisuvanje_vo_katastarot_na_nedviznosti.pdf</item>
         <item>katastar_promena_vo_katastar_nedviznosti.pdf</item>
         <item>katastar_zapisuvanje_vo_zalozno_pravo_hipoteka.pdf</item>
+        <item>katastar_imoten_list.pdf</item>
+        <item>katastar_kopija_od_katastarski_plan.pdf</item>
+        <item>katastar_potvrda_za_imotna_sostojba.pdf</item>
+        <item>katastar_zapisuvanje_vo_katastarot_na_nedviznosti.pdf</item>
+        <item>katastar_uverenie_za_istoriski_pregled_na_izvrshenite_zapisuvanja.pdf</item>
     </string-array>
 
     <!--MVR-->
     <string-array name="category_mvr">
-        <item>ИЗДАВАЊЕ ПАТНА ИСПРАВА - ПАСОШ</item>
-        <item>Издавање патна исправа ако е изгубена или исчезната</item>
-        <item>Издавање на патна исправа ако е пополнета или оштетена</item>
         <item>ИЗДАВАЊЕ ВОЗАЧКА ДОЗВОЛА</item>
-        <item>Издавање на дупликат возачка дозвола</item>
         <item>ИЗДАВАЊЕ НА ВОЗАЧКА КНИШКА</item>
         <item>Издавање на инструкторска возачка дозвола</item>
+        <item>ИЗДАВАЊЕ НА ЛИЧНА КАРТА</item>
         <item>ИЗДАВАЊЕ НА СООБРАЌАЈНА ДОЗВОЛА</item>
-        <item>Изгубена сообраќајна дозвола</item>
-        <item>ИЗДАВАЊЕ НА ЛИЧНА КАРТА ЗА ПРВ ПАТ></item>
-        <item>Замена на лична карта</item>
-        <item>Изгубена лична карта</item>
+        <item>ИЗДАВАЊЕ ПАТНА ИСПРАВА - ПАСОШ</item>
     </string-array>
 
     <string-array name="documents_mvr">
-        <item>mvr_izdavanje_patna_isprava_pasos.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
         <item>mvr_izdavanje_vozacka_dozvola.pdf</item>
-        <item>test.pdf</item>
         <item>mvr_izdavanje_vozacka_knishka.pdf</item>
-        <item>test.pdf</item>
+        <item>mvr_izdavanje_instruktorska_vozacka_dozvola.pdf</item>
+        <item>mvr_izdavanje_licna_karta.pdf</item>
         <item>mvr_izdavanje_soobrakjajna_dozvola.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
+        <item>mvr_izdavanje_patna_isprava_pasos.pdf</item>
     </string-array>
 
     <!--Фондот за здравствено осигурување-->
     <string-array name="category_fzo">
-        <item>НАДОМЕСТОК НА ПЛАТА ПОРАДИ БОЛЕСТ/ПОВРЕДА/НЕГА</item>
-        <item>НАДОМЕСТОК НА ПЛАТА ПОРАДИ БРЕМЕНОСТ И РАЃАЊЕ</item>
-        <item>НАДОМЕСТОК НА ПЛАТА ПОРАДИ ПОВРЕДА НА РАБОТА/ПРОФЕСИОНАЛНА БОЛЕСТ</item>
-        <item>ПРАВО  НА СПЕЦИЈАЛИЗИРАНА МЕДИЦИНСКА РЕХАБИЛИТАЦИЈА</item>
-        <item>БАРАЊЕ ЗА ОСЛОБОДУВАЊЕ ОД ПАРТИЦИПАЦИЈА</item>
         <item>БАРАЊЕ ЗА БОЛНИЧКО ЛЕКУВАЊЕ ВО СТРАНСТВО</item>
+        <item>БАРАЊЕ ЗА ОСЛОБОДУВАЊЕ ОД ПАРТИЦИПАЦИЈА</item>
+        <item>Надомест на средства за искористени здравствени услуги во странство-итен случај</item>
+        <item>НАДОМЕСТОК НА ПЛАТА ПОРАДИ БОЛЕСТ-ПОВРЕДА-НЕГА</item>
         <item>НАДОМЕСТОК НА ПЛАТА ПОРАДИ БРЕМЕНОСТ И РАЃАЊЕ ВО ВИСИНА ОД 50% ОД УТВРДЕНИОТ НАДОМЕСТОК ПОРАДИ ВРАЌАЊЕ НА РАБОТА</item>
+        <item>НАДОМЕСТОК НА ПЛАТА ПОРАДИ БРЕМЕНОСТ И РАЃАЊЕ</item>
+        <item>НАДОМЕСТОК НА ПЛАТА ПОРАДИ ПОВРЕДА НА РАБОТА</item>
+        <item>ПРАВО  НА СПЕЦИЈАЛИЗИРАНА МЕДИЦИНСКА РЕХАБИЛИТАЦИЈА</item>
     </string-array>
 
     <string-array name="documents_fzo">
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
+        <item>fzo_baranje_za_bolnicko_lekuvanje_vo_stranstvo.pdf</item>
+        <item>fzo_baranje_za_osloboduvanje_od_participacija.pdf</item>
+        <item>fzo_nadomest_za_sredstva_za_iskoristeni_zdravstveni_uslogi_vo_stranstvo_iten_slucaj.pdf</item>
+        <item>fzo_nadomestok_na_plata_poradi_boles_povreda_nega.pdf</item>
+        <item>fzo_nadomestok_na_plata_poradi_bremenost_i_raganje_vo_visina_od_50_od_utvrdeniot_nadomestok.pdf</item>
+        <item>fzo_nadomestok_na_plata_poradi_bremenost_i_ragjanje.pdf</item>
+        <item>fzo_nadomestok_na_plata_poradi_povreda_na_rabota.pdf</item>
+        <item>fzo_pravo_na_specijalizirana_medicinska_rehabilitacija.pdf</item>
     </string-array>
 
 
     <!--Управата за водење на матични книги-->
     <string-array name="category_maticno">
-        <item>ПРИЈАВУВАЊЕ НА БРАК И ИЗДАВАЊЕ НА ИЗВОД ОД МАТИЧНА КНИГА НА ВЕНЧАНИ</item>
-        <item>УПИС НА НОВОРОДЕНЧЕ И ИЗДАВАЊЕ НА ИЗВОД ОД МАТИЧНА КНИГА НА РОДЕНИ</item>
+        <item>ДОПОЛНИТЕЛНО ЗАПИШУВАЊЕ НА ИМЕ</item>
+        <item>ДОПОЛНИТЕЛНО ЗАПИШУВАЊЕ НА ПОЧИНАТО ЛИЦЕ</item>
+        <item>ИЗДАВАЊЕ НА УВЕРЕНИЕ ЗА СЛОБОДНА БРАЧНА СОСТОЈБА</item>
+        <item>ПРИЗНАВАЊЕ НА ТАТКОВСТВО</item>
+        <item>ПРИЈАВУВАЊЕ НА БРАК И ИЗДАВАЊЕ НА ИЗВОД ОД МАТИЧНАКНИГА НА ВЕНЧАНИ</item>
         <item>ПРИЈАВУВАЊЕ НА БРАК КОЈ Е СКЛУЧЕН НАДВОР ОД РЕПУБЛИКА  МАКЕДОНИЈА</item>
         <item>ПРИЈАВУВАЊЕ НА ПОЧИНАТО ЛИЦЕ И ИЗДАВАЊЕ НА ИЗВОД ОД МАТИЧНА КНИГА НА УМРЕНИ</item>
-        <item>ИЗДАВАЊЕ НА УВЕРЕНИЕ ЗА СЛОБОДНА БРАЧНА СОСТОЈБА</item>
+        <item>СКЛУЧУВАЊЕ БРАК СО СТРАНСКИ ДРЖАВЈАНИН</item>
+        <item>СКЛУЧУВАЊЕ НА БРАК НАДВОР ОД СЛУЖБЕНИТЕ ПРОСТОРИИ НА УВМК</item>
+        <item>УПИС НА НОВОРОДЕНЧЕ И ИЗДАВАЊЕ НА ИЗВОД ОД МАТИЧНА КНИГА НА РОДЕНИ</item>
     </string-array>
 
     <string-array name="documents_maticno">
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
-        <item>test.pdf</item>
+        <item>maticna_kniga_dopolnitelno_zapisuvanje_na_ime.pdf</item>
+        <item>maticna_kniga_dopolnitelno_zapisuvanje_na_pocinato_lice.pdf</item>
+        <item>maticna_kniga_izdavanje_na_uverenie_za_slobodna_bracna_sosotojba.pdf</item>
+        <item>maticna_kniga_priznavanje_na_tatkovstvo.pdf</item>
+        <item>maticna_kniga_prijavuvanje_na_brak_i_izdavanje_na_izvod_od_maticnata_kniga_na_venchani.pdf</item>
+        <item>maticna_kniga_prijavuvanje_na_brak_koj_e_sklucen_nadvor_od_RM.pdf</item>
+        <item>maticna_kniga_prijavuvanje_na_pocinato_lice_i_izdavanje_na_izvod_od_maticna_kniga_na_umreni.pdf</item>
+        <item>maticna_kniga_sklucen_brak_so_stranski_drzavjanin.pdf</item>
+        <item>maticna_kniga_sklucuvanje_na_brak_nadov_od_sluzbeni_prostorii_na_UVMK.pdf</item>
+        <item>maticna_kniga_upis_na_novorodence_i_izdavanje_izvod_od_maticka_kniga_na_rodeni.pdf</item>
     </string-array>
 
     <!-- УЈП-->
@@ -152,15 +152,15 @@
 
     <!-- УЈП-->
     <string-array name="category_piom">
-        <item>ПРАВО НА СТАРОСНА ПЕНЗИЈА</item>
         <item>ПРАВО НА ИНВАЛИДСКА ПЕНЗИЈА</item>
-        <item>ОСТВАРУВАЊЕ НА ПРАВО ОД СЕМЕЈНА ПЕНЗИЈА</item>
+        <item>ПРАВО НА СТАРОСНА ПЕНЗИЈА</item>
+        <item>ПРАВО ОД СЕМЕЈНА ПЕНЗИЈА</item>
     </string-array>
 
 
     <string-array name="documents_piom">
-        <item>piom_pravo_na_starosna_penzija.pdf</item>
         <item>piom_pravo_na_invalidska_penzija.pdf</item>
+        <item>piom_pravo_na_starosna_penzija.pdf</item>
         <item>piom_pravo_na_semejna_penzija.pdf</item>
     </string-array>
 
