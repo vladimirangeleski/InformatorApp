@@ -13,7 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 
-import com.joanzapata.pdfview.PDFView;
+import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.listener.OnErrorListener;
 
 import java.io.IOException;
 
@@ -101,7 +102,17 @@ public class DocumentFragment extends Fragment {
 
     private void display(String assetFileName) {
         try {
-            pdfView.fromAsset(assetFileName).showMinimap(true).enableSwipe(true)
+            pdfView.recycle();
+            pdfView.useBestQuality(true);
+            pdfView.fromAsset(assetFileName).enableSwipe(true)
+                    .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
+                    .enableAntialiasing(true)
+                    .onError(new OnErrorListener() {
+                        @Override
+                        public void onError(Throwable t) {
+                            t.printStackTrace();
+                        }
+                    })
                     .load();
             if (getActivity() != null)
                 getActivity().setTitle(subCategory.getName());
@@ -113,6 +124,14 @@ public class DocumentFragment extends Fragment {
             } catch (Exception e1) {
                 LogWrapper.e(TAG, e1.getMessage());
             }
+        }
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (pdfView != null) {
+            pdfView.recycle();
         }
     }
 
