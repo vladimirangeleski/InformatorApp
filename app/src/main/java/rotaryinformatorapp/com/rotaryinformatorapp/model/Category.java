@@ -9,11 +9,23 @@ import java.util.List;
  */
 public class Category implements Serializable {
 
+    public static final int ABOUT_ROTARY_ID = 99;
+
     private int id;
     private String name;
     private int drawable;
     private int statusbarColor;
     private int actionbarColor;
+
+    public String getAssetFileName() {
+        return assetFileName;
+    }
+
+    public void setAssetFileName(String assetFileName) {
+        this.assetFileName = assetFileName;
+    }
+
+    private String assetFileName;
 
     private List<SubCategory> subCategories = new ArrayList<>(30);
 

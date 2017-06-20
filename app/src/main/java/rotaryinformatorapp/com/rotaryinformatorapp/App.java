@@ -5,12 +5,11 @@ import android.content.Context;
 
 import com.crashlytics.android.Crashlytics;
 
-import io.fabric.sdk.android.Fabric;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import io.fabric.sdk.android.Fabric;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.Category;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
 
@@ -155,8 +154,8 @@ public class App extends Application {
     }
 
     private void initAboutRotaryCategory() {
-        Category category = new Category(99, getString(R.string.category_about_rotary), R.drawable.rotary_selector, R.color.colorPrimary, R.color.colorPrimaryDark);
-
+        Category category = new Category(Category.ABOUT_ROTARY_ID, getString(R.string.category_about_rotary), R.drawable.rotary_selector, R.color.colorPrimary, R.color.colorPrimaryDark);
+        category.setAssetFileName("za_rotari.pdf");
         categories.add(category);
     }
 }

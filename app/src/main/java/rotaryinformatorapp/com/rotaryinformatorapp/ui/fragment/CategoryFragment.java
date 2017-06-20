@@ -17,6 +17,7 @@ import rotaryinformatorapp.com.rotaryinformatorapp.App;
 import rotaryinformatorapp.com.rotaryinformatorapp.R;
 import rotaryinformatorapp.com.rotaryinformatorapp.adapter.CategoriesRecyclerViewAdapter;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.Category;
+import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
 import rotaryinformatorapp.com.rotaryinformatorapp.ui.activity.MainActivity;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.BundleConstants;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.GridAutofitLayoutManager;
@@ -69,15 +70,26 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
     }
 
     private void openClickedCategory(Category category, int position) {
-        FragmentManager fm = getFragmentManager();
-        SubCategoriesFragment fragment = new SubCategoriesFragment();
-        Bundle bundle = new Bundle();
-        bundle.putSerializable(BundleConstants.CATEGORY, category);
-        fragment.setArguments(bundle);
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        ft.replace(R.id.container, fragment, SubCategoriesFragment.TAG).addToBackStack(null).commit();
-        //.setCustomAnimations(android.R.anim.fade_out, android.R.anim.fade_in)
+        if (category.getId() == Category.ABOUT_ROTARY_ID) {
+            FragmentManager fm = getFragmentManager();
+            DocumentFragment fragment = new DocumentFragment();
+            Bundle bundle = new Bundle();
+            SubCategory subCategory = new SubCategory(1, category.getName(),category.getAssetFileName(),category.getActionbarColor());
+            bundle.putSerializable(BundleConstants.SUB_CATEGORY, subCategory);
+            fragment.setArguments(bundle);
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+            ft.replace(R.id.container, fragment, SubCategoriesFragment.TAG).addToBackStack(null).commit();
+        } else {
+            FragmentManager fm = getFragmentManager();
+            SubCategoriesFragment fragment = new SubCategoriesFragment();
+            Bundle bundle = new Bundle();
+            bundle.putSerializable(BundleConstants.CATEGORY, category);
+            fragment.setArguments(bundle);
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+            ft.replace(R.id.container, fragment, SubCategoriesFragment.TAG).addToBackStack(null).commit();
+        }
     }
 
     @Override
