@@ -88,6 +88,11 @@ public class App extends Application {
          * About rotary
          */
         initAboutRotaryCategory();
+
+        /**
+         * About Project
+         */
+        initAboutProject();
     }
 
     private void initSUDCategory() {
@@ -155,6 +160,12 @@ public class App extends Application {
 
     private void initAboutRotaryCategory() {
         Category category = new Category(Category.ABOUT_ROTARY_ID, getString(R.string.category_about_rotary), R.drawable.rotary_selector, R.color.colorPrimary, R.color.colorPrimaryDark);
+        category.setAssetFileName("za_rotari.pdf");
+        categories.add(category);
+    }
+
+    private void initAboutProject() {
+        Category category = new Category(Category.ABOUT_PROJECT_ID, getString(R.string.category_about_project), R.drawable.about_project_selector, R.color.colorPrimary, R.color.colorPrimaryDark);
         category.setAssetFileName("za_rotari.pdf");
         categories.add(category);
     }

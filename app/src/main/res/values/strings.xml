@@ -11,6 +11,7 @@
     <string name="category_fzo">ФЗО</string>
     <string name="category_piom">ПИОМ</string>
     <string name="category_about_rotary">За Ротари</string>
+    <string name="category_about_project">За Проектот</string>
 
     <string name="document">Документ:</string>
     <string name="welcome_message">Добредојде во Информатор</string>

@@ -9,7 +9,8 @@ import java.util.List;
  */
 public class Category implements Serializable {
 
-    public static final int ABOUT_ROTARY_ID = 99;
+    public static final int ABOUT_ROTARY_ID = 91;
+    public static final int ABOUT_PROJECT_ID = 92;
 
     private int id;
     private String name;

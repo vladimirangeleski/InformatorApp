@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         logo = (ImageView) findViewById(R.id.pdfview);
-        
+
         Handler mainHandler = new Handler(getMainLooper());
         mainHandler.postDelayed(new PostDelayRunnable(this), SPLASH_SCREEN_DURATION);
     }
