@@ -105,6 +105,8 @@ public class DocumentFragment extends Fragment {
             pdfView.recycle();
             pdfView.useBestQuality(true);
             pdfView.fromAsset(assetFileName).enableSwipe(true)
+                    .swipeHorizontal(true)
+                    .enableDoubletap(true)
                     .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
                     .enableAntialiasing(true)
                     .onError(new OnErrorListener() {
@@ -117,7 +119,7 @@ public class DocumentFragment extends Fragment {
             if (getActivity() != null)
                 getActivity().setTitle(subCategory.getName());
         } catch (Exception e) {
-            LogWrapper.e(TAG, e.getMessage());
+            LogWrapper.e(TAG, ""+e.getMessage());
             Toast.makeText(App.getContext(), getString(R.string.load_file_error), Toast.LENGTH_SHORT).show();
             try {
                 exitFragment();
