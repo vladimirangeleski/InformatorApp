@@ -6,11 +6,11 @@
     android:clickable="true"
     android:focusable="true"
     android:orientation="horizontal"
-    android:padding="5dp">
+    android:padding="3dp">
 
     <View
         android:id="@+id/indicator"
-        android:layout_width="15dp"
+        android:layout_width="10dp"
         android:layout_height="match_parent"
         android:background="@color/colorAccent" />
 
@@ -28,7 +28,6 @@
             android:layout_marginLeft="10dp"
             android:ellipsize="end"
             android:maxLines="2"
-            android:text="Category name"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@android:color/black" />
 

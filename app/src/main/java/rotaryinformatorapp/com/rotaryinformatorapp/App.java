@@ -166,7 +166,7 @@ public class App extends Application {
 
     private void initAboutProject() {
         Category category = new Category(Category.ABOUT_PROJECT_ID, getString(R.string.category_about_project), R.drawable.about_project_selector, R.color.colorPrimary, R.color.colorPrimaryDark);
-        category.setAssetFileName("za_rotari.pdf");
+        category.setAssetFileName("za_proektot.pdf");
         categories.add(category);
     }
 }

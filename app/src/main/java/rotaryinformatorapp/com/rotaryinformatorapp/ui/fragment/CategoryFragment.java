@@ -70,11 +70,11 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
     }
 
     private void openClickedCategory(Category category, int position) {
-        if (category.getId() == Category.ABOUT_ROTARY_ID) {
+        if (category.getId() == Category.ABOUT_ROTARY_ID || category.getId() == Category.ABOUT_PROJECT_ID) {
             FragmentManager fm = getFragmentManager();
             DocumentFragment fragment = new DocumentFragment();
             Bundle bundle = new Bundle();
-            SubCategory subCategory = new SubCategory(1, category.getName(),category.getAssetFileName(),category.getActionbarColor());
+            SubCategory subCategory = new SubCategory(category.getId(), category.getName(),category.getAssetFileName(),category.getActionbarColor());
             bundle.putSerializable(BundleConstants.SUB_CATEGORY, subCategory);
             fragment.setArguments(bundle);
             FragmentTransaction ft = fm.beginTransaction();

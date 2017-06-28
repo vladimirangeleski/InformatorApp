@@ -28,7 +28,7 @@ public class Category implements Serializable {
 
     private String assetFileName;
 
-    private List<SubCategory> subCategories = new ArrayList<>(30);
+    private List<SubCategory> subCategories = new ArrayList<>();
 
     public Category(int id, String name, int drawable, int statusbarColor, int actionbarColor) {
         this.id = id;

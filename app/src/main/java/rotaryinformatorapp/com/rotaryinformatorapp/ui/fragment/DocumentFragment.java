@@ -20,6 +20,7 @@ import java.io.IOException;
 
 import rotaryinformatorapp.com.rotaryinformatorapp.App;
 import rotaryinformatorapp.com.rotaryinformatorapp.R;
+import rotaryinformatorapp.com.rotaryinformatorapp.model.Category;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
 import rotaryinformatorapp.com.rotaryinformatorapp.ui.activity.MainActivity;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.BundleConstants;
@@ -83,6 +84,10 @@ public class DocumentFragment extends Fragment {
         });
         sendEmail.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(subCategory.getColor())));
 
+        if (subCategory.getId() == Category.ABOUT_ROTARY_ID || subCategory.getId() == Category.ABOUT_PROJECT_ID) {
+            sendEmail.setVisibility(View.GONE);
+        }
+
     }
 
     @Override
@@ -119,7 +124,7 @@ public class DocumentFragment extends Fragment {
             if (getActivity() != null)
                 getActivity().setTitle(subCategory.getName());
         } catch (Exception e) {
-            LogWrapper.e(TAG, ""+e.getMessage());
+            LogWrapper.e(TAG, "" + e.getMessage());
             Toast.makeText(App.getContext(), getString(R.string.load_file_error), Toast.LENGTH_SHORT).show();
             try {
                 exitFragment();
