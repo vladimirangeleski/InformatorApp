@@ -79,7 +79,7 @@ public class DocumentFragment extends Fragment {
                 }
 
                 email.putExtra(Intent.EXTRA_STREAM, uri1);
-                startActivity(Intent.createChooser(email, "Одбери Email клиент :"));
+                startActivity(Intent.createChooser(email, getString(R.string.choose_share_option)));
             }
         });
         sendEmail.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(subCategory.getColor())));

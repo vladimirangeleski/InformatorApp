@@ -15,7 +15,7 @@
 
     <string name="document">Документ:</string>
     <string name="welcome_message">Добредојде во Информатор</string>
-
+    <string name="choose_share_option">Сподели преку</string>
 
     <!--SUD-->
     <string-array name="category_sud">
