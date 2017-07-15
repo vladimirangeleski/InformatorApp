@@ -18,7 +18,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId 'mk.rotary.mojdokument'
+        applicationId 'mk.rotaraktbitola.mojdokument'
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
