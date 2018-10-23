@@ -7,8 +7,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.DisplayMetrics;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +18,6 @@ import rotaryinformatorapp.com.rotaryinformatorapp.model.Category;
 import rotaryinformatorapp.com.rotaryinformatorapp.model.SubCategory;
 import rotaryinformatorapp.com.rotaryinformatorapp.ui.activity.MainActivity;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.BundleConstants;
-import rotaryinformatorapp.com.rotaryinformatorapp.util.GridAutofitLayoutManager;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.LogWrapper;
 import rotaryinformatorapp.com.rotaryinformatorapp.util.Util;
 
@@ -49,7 +46,7 @@ public class CategoryFragment extends Fragment implements CategoriesRecyclerView
     }
 
     private void initView(View view) {
-        categories = (RecyclerView) view.findViewById(R.id.categories);
+        categories = view.findViewById(R.id.categories);
         categories.setHasFixedSize(true);
         int numberOfColumns = Util.calculateNumberOfCategoryColums(getContext());
 

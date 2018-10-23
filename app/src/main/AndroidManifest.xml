@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="rotaryinformatorapp.com.rotaryinformatorapp">
+          package="rotaryinformatorapp.com.rotaryinformatorapp">
 
     <application
         android:name="App"
@@ -15,24 +15,20 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
         <activity
             android:name=".ui.activity.MainActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="0ca6b78f11916ce2da5cb99fd2acd0ab062d2bed" />
+            android:value="0ca6b78f11916ce2da5cb99fd2acd0ab062d2bed"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>

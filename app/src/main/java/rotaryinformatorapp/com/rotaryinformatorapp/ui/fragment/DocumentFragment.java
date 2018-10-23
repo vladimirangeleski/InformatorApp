@@ -12,11 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnErrorListener;
-
-import java.io.IOException;
 
 import rotaryinformatorapp.com.rotaryinformatorapp.App;
 import rotaryinformatorapp.com.rotaryinformatorapp.R;
@@ -56,8 +53,8 @@ public class DocumentFragment extends Fragment {
     }
 
     private void initView(View view) {
-        pdfView = (PDFView) view.findViewById(R.id.pdfview);
-        sendEmail = (FloatingActionButton) view.findViewById(R.id.sendEmail);
+        pdfView = view.findViewById(R.id.pdfview);
+        sendEmail = view.findViewById(R.id.sendEmail);
         sendEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,7 +70,7 @@ public class DocumentFragment extends Fragment {
                 try {
                     uri1 = Uri.fromFile(Util.getAssetFile(App.getContext(), subCategory.getAssetFileName()));
                     LogWrapper.d(TAG, "URI=" + uri1);
-                } catch (IOException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                     Toast.makeText(App.getContext(), "Wooops", Toast.LENGTH_LONG).show();
                 }

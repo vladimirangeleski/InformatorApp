@@ -3,6 +3,7 @@ package rotaryinformatorapp.com.rotaryinformatorapp.util;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
+import android.os.StrictMode;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -45,6 +46,8 @@ public class Util {
     }
 
     public static File getAssetFile(Context context, String fileName) throws IOException {
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
         AssetManager assetManager = context.getAssets();
         InputStream in = null;
         OutputStream out = null;
